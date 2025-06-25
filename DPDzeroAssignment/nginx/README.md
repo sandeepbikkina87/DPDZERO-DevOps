@@ -41,7 +41,7 @@ nginx/
 
 #### This custom setup allows NGINX to reverse proxy traffic to your backend services (e.g., `service_1` and `service_2`).
 
-#### Update `default.conf` to control routing, like:
+#### Update `nginx.conf` to control routing, like:
 
 ```
 server {
