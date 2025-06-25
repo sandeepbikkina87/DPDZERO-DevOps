@@ -4,7 +4,7 @@
 
 ```
 FROM nginx:alpine
-COPY default.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/nginx.conf
 EXPOSE 80
 
 ```
@@ -21,7 +21,7 @@ EXPOSE 80
 
 ##### Replaces the default NGINX configuration with a custom one provided in the nginx/ directory.
 
-- `COPY default.conf /etc/nginx/conf.d/default.conf `
+- `COPY nginx.conf /etc/nginx/conf.d/nginx.conf `
 
 ##### Exposes port 80 inside the container for HTTP traffic.
 
