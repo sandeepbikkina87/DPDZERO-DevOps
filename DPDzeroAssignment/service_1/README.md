@@ -34,8 +34,8 @@ This will start the server on port `8001`.
 
 Then visit:
 
-* [http://localhost:8001/ping](http://localhost:8001/ping)
-* [http://localhost:8001/hello](http://localhost:8001/hello)
+* [http://localhost:8080/8001/ping](http://localhost:8001/ping)
+* [http://localhost:8080/8001/hello](http://localhost:8001/hello)
 
 ---
 
