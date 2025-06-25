@@ -74,9 +74,9 @@ git --version
 
 >> Once the containers are up and running, open your browser and go to.
 
-http://localhost:8080 # nginx
-http://localhost:8080/service1/ping # golang
-http://localhost:8080/service2/ping # python
+http://localhost # nginx
+http://localhost/service1/ping # golang
+http://localhost/service2/ping # python
 
 5. Stopping the Project
 
