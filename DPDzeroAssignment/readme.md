@@ -1,18 +1,20 @@
-### 🧪 **DevOps Intern Assignment: Nginx Reverse Proxy + Docker**
+# DPDZERO-DevOps
 
-# 🧩 Multi-Service Dockerized Application
+==============================  DevOps Intern Assignment: Nginx Reverse Proxy + Docker ==================================
+
+>> Multi-Service Dockerized Application
 
 This project contains multiple services managed using Docker Compose:
 
-- **service_1**: A Go backend service
-- **service_2**: A Python backend service (FastAPI or Flask)
-- **nginx**: A reverse proxy for routing between services
+>> service_1 : A Go backend service
+>> service_2 : A Python backend service (FastAPI or Flask)
+>> nginx : A reverse proxy for routing between services
 
 ---
 
-## 📁 Project Structure
+>> Project Structure
 
-```
+
 ├── docker-compose.yml
 ├── nginx
 │   ├── default.conf
@@ -29,13 +31,10 @@ This project contains multiple services managed using Docker Compose:
     ├── pyproject.toml
     ├── README.md
     └── uv.lock
-```
 
----
 
-## 🚀 Getting Started
 
-### ✅ Prerequisites
+>> Prerequisites
 
 Make sure you have the following installed:
 
@@ -45,89 +44,46 @@ Make sure you have the following installed:
 
 Check Docker installation:
 
-```bash
 docker --version
 docker compsose version
 git --version
-```
 
----
 
-### 🛠 How to Run the Project
+>>  How to Run the Project
 
-1. **Clone the Repository**
+1. Clone the Repository
 
-   ```bash
    git clone <your-repo-url>
    cd <project-directory>
 
-   ```
+2. Build and Start All Services
+   
+   docker-compose up -d # -d for detach mode
 
-2. **Build and Start All Services**
-   ```bash
-   docker-compose up --build -d # -d for detach mode
-   ```
-
-#### This command will -:
+>> This command will:
 
 - Build Docker images for each service
-- Start containers for service_1, service_2, and nginx
+- Start the containers for service_1, service_2, and nginx
 
-3. **View Running Containers**
+3. View Running Containers
 
-   ```bash
-   docker ps
+   docker ps  #view running containers
+   docker ps -a  #view running/existing containers
 
-   ```
+4. Access the Application
 
-4. **Access the Application**
+>> Once the containers are up and running, open your browser and go to.
 
-##### Once the containers are up and running, open your browser and go to.
+http://localhost:8080 # nginx
+http://localhost:8080/service1/ping # golang
+http://localhost:8080/service2/ping # python
 
-####
+5. Stopping the Project
 
-```bash
-http://localhost # nginx
-http://localhost/service1/ping # golang
-http://localhost/service2/ping # python
-```
+>>To stop all containers and remove networks
 
----
-
-## 🛑 Stopping the Project
-
-### To stop all containers and remove networks
-
-```bash
 docker-compose down
-```
 
----
+>> View Logs from All Services
 
-## 📜 View Logs from All Services
-
-```
-docker compse logs -f
-
-```
-
-#### You can also view logs for a specific service:
-
-```
-docker-compose logs -f service_1
-docker-compose logs -f service_2
-docker-compose logs -f nginx
-
-```
-
----
-
-## 📌 Notes
-
-### Ensure that required ports (e.g., 80, 8001, 8002) are not in use.
-
-### Link of assignment 
-```
-https://docs.dpdzero.com/s/54dd25e3-7b3f-4327-92e8-34e32d8c377b#h-%E2%9C%85-requirements
-https://github.com/DPDzero/devops-assignment-Q2-2025.git
-```
+docker compose logs -f
